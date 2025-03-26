@@ -484,9 +484,29 @@ h6,
 .link-animated a:hover {
     padding-left: 10px;
 }
-
-@media (min-width: 767.98px) {
-    .footer-about {
-        margin-bottom: -75px;
+@media (max-width: 991.98px) {
+    /* Garante que a logo e o botão não se sobreponham */
+    .navbar-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+    
+    /* Ajuste do tamanho da logo + texto */
+    .navbar-brand h1 {
+      font-size: 1.2rem;
+      white-space: nowrap;
+      margin-right: 10px; /* Espaço entre logo e botão */
+    }
+    
+    /* Tamanho reduzido da imagem da logo */
+    .navbar-brand img {
+      height: 0.9em;
+    }
+    
+    /* Botão mais compacto */
+    .navbar-toggler {
+      padding: 0.25rem 0.5rem;
     }
 }
