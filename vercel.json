@@ -3,7 +3,13 @@
     {
       "source": "/(.*)",
       "destination": "https://www.hebertonpinheiro.com/$1",
-      "permanent": true
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "hebertonpinheiro.com"
+        }
+      ]
     }
   ]
 }
