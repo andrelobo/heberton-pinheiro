@@ -1,0 +1,124 @@
+{
+  "vagas": [
+    {
+      "id": 1,
+      "titulo": "Assistente Administrativo",
+      "empresa": "Tech Solutions Ltda",
+      "localizacao": "Manaus/AM",
+      "setor": "Administrativo",
+      "tipoDeficiencia": "Deficiência Auditiva",
+      "requisitos": "Ensino médio completo, conhecimentos em planilhas Excel, organização",
+      "libras": "valorizado",
+      "salario": "R$ 1.800,00",
+      "descricao": "Auxiliar nas atividades administrativas, controle de documentos e atendimento interno."
+    },
+    {
+      "id": 2,
+      "titulo": "Designer Gráfico",
+      "empresa": "Creative Minds",
+      "localizacao": "Remoto",
+      "setor": "Tecnologia",
+      "tipoDeficiencia": "Deficiência Auditiva",
+      "requisitos": "Conhecimento em Photoshop, Illustrator, Figma, portfolio criativo",
+      "libras": "necessario",
+      "salario": "R$ 3.500,00",
+      "descricao": "Criação de materiais gráficos, identidade visual e peças publicitárias."
+    },
+    {
+      "id": 3,
+      "titulo": "Atendente de Call Center",
+      "empresa": "Atend+",
+      "localizacao": "São Paulo/SP",
+      "setor": "Atendimento",
+      "tipoDeficiencia": "Deficiência Física",
+      "requisitos": "Boa comunicação, informática básica, paciência para atendimento",
+      "libras": "valorizado",
+      "salario": "R$ 1.600,00",
+      "descricao": "Atendimento telefônico aos clientes, resolução de dúvidas e suporte."
+    },
+    {
+      "id": 4,
+      "titulo": "Desenvolvedor Júnior",
+      "empresa": "InovaTech",
+      "localizacao": "Híbrido",
+      "setor": "Tecnologia",
+      "tipoDeficiencia": "Deficiência Auditiva",
+      "requisitos": "Lógica de programação, HTML/CSS, JavaScript básico, Git",
+      "libras": "valorizado",
+      "salario": "R$ 4.200,00",
+      "descricao": "Desenvolvimento de aplicações web, manutenção de sistemas e correção de bugs."
+    },
+    {
+      "id": 5,
+      "titulo": "Operador de Telemarketing",
+      "empresa": "Connect Plus",
+      "localizacao": "Rio de Janeiro/RJ",
+      "setor": "Vendas",
+      "tipoDeficiencia": "Deficiência Visual",
+      "requisitos": "Experiência em vendas, boa dicção, conhecimento em CRM",
+      "libras": "nao_necessario",
+      "salario": "R$ 1.900,00",
+      "descricao": "Prospecção de clientes via telefone, apresentação de produtos e fechamento de vendas."
+    },
+    {
+      "id": 6,
+      "titulo": "Analista de Recursos Humanos",
+      "empresa": "RH Inclusivo",
+      "localizacao": "Belo Horizonte/MG",
+      "setor": "Administrativo",
+      "tipoDeficiencia": "Deficiência Física",
+      "requisitos": "Formação em Psicologia ou RH, conhecimento em recrutamento e seleção",
+      "libras": "necessario",
+      "salario": "R$ 3.800,00",
+      "descricao": "Recrutamento e seleção de candidatos PCD, treinamentos em diversidade e inclusão."
+    },
+    {
+      "id": 7,
+      "titulo": "Auxiliar de Produção",
+      "empresa": "Indústria Amazonas",
+      "localizacao": "Manaus/AM",
+      "setor": "Indústria",
+      "tipoDeficiencia": "Deficiência Física",
+      "requisitos": "Ensino fundamental, disponibilidade para trabalhar em turnos",
+      "libras": "valorizado",
+      "salario": "R$ 1.700,00",
+      "descricao": "Auxiliar na linha de produção, controle de qualidade e organização do ambiente."
+    },
+    {
+      "id": 8,
+      "titulo": "Contador Júnior",
+      "empresa": "Contábil & Cia",
+      "localizacao": "Porto Alegre/RS",
+      "setor": "Administrativo",
+      "tipoDeficiencia": "Deficiência Visual",
+      "requisitos": "Formação em Ciências Contábeis, conhecimento em sistemas contábeis",
+      "libras": "nao_necessario",
+      "salario": "R$ 3.200,00",
+      "descricao": "Escrituração contábil, conciliação bancária e elaboração de relatórios."
+    },
+    {
+      "id": 9,
+      "titulo": "Vendedor Externo",
+      "empresa": "Vendas & Resultados",
+      "localizacao": "Fortaleza/CE",
+      "setor": "Vendas",
+      "tipoDeficiencia": "Outras Deficiências",
+      "requisitos": "Experiência em vendas, CNH categoria B, facilidade de relacionamento",
+      "libras": "valorizado",
+      "salario": "R$ 2.500,00 + comissões",
+      "descricao": "Visitas a clientes, apresentação de produtos e negociação de contratos."
+    },
+    {
+      "id": 10,
+      "titulo": "Intérprete de Libras",
+      "empresa": "Educação Inclusiva",
+      "localizacao": "Brasília/DF",
+      "setor": "Atendimento",
+      "tipoDeficiencia": "Todas as deficiências",
+      "requisitos": "Certificação em Libras, experiência em interpretação, fluência em português",
+      "libras": "necessario",
+      "salario": "R$ 4.500,00",
+      "descricao": "Interpretação em eventos, reuniões e aulas, tradução de materiais para Libras."
+    }
+  ]
+}
