@@ -150,73 +150,39 @@
     <!-- Tipos de Voluntariado End -->
 
     <!-- Formulário Voluntário Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s" id="formulario-voluntario">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-6">
-                    <div class="section-title position-relative pb-3 mb-5">
-                        <h5 class="fw-bold text-primary text-uppercase">Junte-se a nós</h5>
-                        <h1 class="mb-0">Formulário de Voluntariado</h1>
+<div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s" id="formulario-voluntario">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-6">
+                <div class="section-title position-relative pb-3 mb-5">
+                    <h5 class="fw-bold text-primary text-uppercase">Junte-se a nós</h5>
+                    <h1 class="mb-0">Seja um Voluntário</h1>
+                </div>
+                <p class="mb-4">Estamos sempre buscando pessoas comprometidas com a causa da inclusão para fazer parte da nossa equipe de voluntários. Sua ajuda é fundamental para promover a acessibilidade e transformar vidas!</p>
+                <div class="d-flex align-items-center mt-4 wow zoomIn" data-wow-delay="0.6s">
+                    <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
+                        <i class="fa fa-phone-alt text-white"></i>
                     </div>
-                    <p class="mb-4">Preencha o formulário ao lado e nos conte como você gostaria de contribuir com nosso projeto. Sua ajuda é fundamental para promover a inclusão!</p>
-                    <div class="d-flex align-items-center mt-4 wow zoomIn" data-wow-delay="0.6s">
-                        <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
-                            <i class="fa fa-phone-alt text-white"></i>
-                        </div>
-                        <div class="ps-4">
-                            <h5 class="mb-2">Dúvidas? Fale conosco</h5>
-                            <h4 class="text-primary mb-0">+55 92 98439-2169</h4>
-                        </div>
+                    <div class="ps-4">
+                        <h5 class="mb-2">Dúvidas? Fale conosco</h5>
+                        <h4 class="text-primary mb-0">+55 92 98439-2169</h4>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="bg-light rounded p-5">
-                        <form>
-                            <div class="row g-3">
-                                <div class="col-12">
-                                    <input type="text" class="form-control bg-white border-0" placeholder="Seu Nome" style="height: 55px;" required>
-                                </div>
-                                <div class="col-12">
-                                    <input type="email" class="form-control bg-white border-0" placeholder="Seu E-mail" style="height: 55px;" required>
-                                </div>
-                                <div class="col-12">
-                                    <input type="text" class="form-control bg-white border-0" placeholder="WhatsApp" style="height: 55px;" required>
-                                </div>
-                                <div class="col-12">
-                                    <select class="form-select bg-white border-0" style="height: 55px;" required>
-                                        <option selected disabled>Em que gostaria de ajudar?</option>
-                                        <option>Produção de vídeos acessíveis</option>
-                                        <option>Organização de eventos</option>
-                                        <option>Redes sociais e marketing</option>
-                                        <option>Desenvolvimento web</option>
-                                        <option>Compartilhar vivências</option>
-                                        <option>Tradução/intérprete de Libras</option>
-                                        <option>Outra área</option>
-                                    </select>
-                                </div>
-                                <div class="col-12">
-                                    <select class="form-select bg-white border-0" style="height: 55px;" required>
-                                        <option selected disabled>Disponibilidade</option>
-                                        <option>Horário comercial</option>
-                                        <option>Finais de semana</option>
-                                        <option>Período noturno</option>
-                                        <option>Horários flexíveis</option>
-                                    </select>
-                                </div>
-                                <div class="col-12">
-                                    <input type="text" class="form-control bg-white border-0" placeholder="Cidade/Estado" style="height: 55px;" required>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Quero ser voluntário</button>
-                                </div>
-                            </div>
-                        </form>
+            </div>
+            <div class="col-lg-6">
+                <div class="bg-light rounded p-5 text-center d-flex flex-column justify-content-center h-100">
+                    <div class="mb-4">
+                        <i class="fa fa-heart fa-3x text-primary mb-3"></i>
+                        <h3 class="mb-3">Quer fazer parte da nossa equipe?</h3>
+                        <p class="mb-4">Clique no botão abaixo para acessar nosso formulário de voluntariado no Typeform e nos conte como você gostaria de contribuir.</p>
                     </div>
+                    <a href="https://seutypeform.aqui" target="_blank" class="btn btn-primary py-3 px-5">Preencher Formulário de Voluntariado</a>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Formulário Voluntário End -->
+</div>
+<!-- Formulário Voluntário End -->
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
@@ -295,6 +261,19 @@
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    !-- VLibras Widget -->
+<div vw class="enabled">
+  <div vw-access-button class="active"></div>
+  <div vw-plugin-wrapper>
+    <div class="vw-plugin-top-wrapper"></div>
+  </div>
+</div>
+
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+  new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
 
     <!-- VLibras Widget -->
     <div vw class="enabled">
