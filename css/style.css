@@ -492,3 +492,22 @@ h6,
         padding: 0.25rem 0.5rem;
     }
 }
+/* Estilos para os cards de parceiros */
+.partner-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e9ecef;
+}
+
+.partner-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.partner-card img {
+    filter: grayscale(50%);
+    transition: filter 0.3s ease;
+}
+
+.partner-card:hover img {
+    filter: grayscale(0%);
+}
