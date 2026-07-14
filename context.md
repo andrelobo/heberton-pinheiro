@@ -173,5 +173,5 @@ heberton-pinheiro/
 - **Config:** `vercel.json` com redirects
 
 ## Pendências / Próximos Passos
-- [ ] Formulário de voluntariado (`parceiros.html`) — link placeholder `https://seutypeform.aqui` precisa ser substituído pelo URL real do Typeform
-- [ ] Formulário de parceria (`voluntario.html`) — link placeholder precisa ser substituído
+- [ ] Formulário de voluntariado (`voluntario.html`) — link placeholder `https://seutypeform.aqui` será substituído pelo formulário próprio (em desenvolvimento)
+- [ ] Formulário de parceria (`parceiros.html`) — link placeholder será substituído pelo formulário próprio (em desenvolvimento)
