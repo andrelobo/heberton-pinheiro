@@ -79,7 +79,7 @@
     <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
 
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center" aria-hidden="true">
         <div class="spinner"></div>
     </div>
     <!-- Spinner End -->
@@ -157,7 +157,11 @@
         <div class="row g-5">
             <div class="col-lg-5" style="min-height: 500px;">
                 <div class="position-relative h-100">
-                    <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="img/team-1.jpg" style="object-fit: cover;" alt="Heberton Pinheiro - Consultor em Acessibilidade">
+                    <picture class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" style="object-fit: cover;">
+                        <source srcset="img/team-1.webp" type="image/webp">
+                        <source srcset="img/team-1_opt.jpg" type="image/jpeg">
+                        <img class="w-100 h-100" src="img/team-1_opt.jpg" style="object-fit: cover;" alt="Heberton Pinheiro - Consultor em Acessibilidade" width="800" height="1067">
+                    </picture>
                 </div>
             </div>
             <div class="col-lg-7">
