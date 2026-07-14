@@ -164,8 +164,8 @@ heberton-pinheiro/
 - Atualizado de "Heberton Pinheiro Treinamentos" para "Heberton Pinheiro Consultoria e Treinamento" em todos os arquivos (36 ocorrências, 12 arquivos)
 
 ## Git
-- **Último commit:** `66b5785` — fix: update company name to 'Heberton Pinheiro Consultoria e Treinamento'
-- **Commits anteriores:** `77324b7` (premium design system v2), `f8055c6` (bug fixes + accessibility + SEO)
+- **Último commit:** `f13ff55` — fix: remove partner logos section with missing images
+- **Commits anteriores:** `27e27be` (copyright year 2025→2026), `66b5785` (company name update), `77324b7` (premium design system v2), `f8055c6` (bug fixes + accessibility + SEO)
 
 ## Deploy
 - **Plataforma:** Vercel (deploy automático via GitHub)
@@ -175,5 +175,3 @@ heberton-pinheiro/
 ## Pendências / Próximos Passos
 - [ ] Formulário de voluntariado (`parceiros.html`) — link placeholder `https://seutypeform.aqui` precisa ser substituído pelo URL real do Typeform
 - [ ] Formulário de parceria (`voluntario.html`) — link placeholder precisa ser substituído
-- [ ] Imagens de empresas parceiras (`vagas-inclusivas.html`) — `empresa1.png` a `empresa6.png` podem ser placeholders
-- [ ] `current-year` hardcoded como `2025` no HTML (será atualizado por JS, mas poderia usar `2026` já que estamos em 2026)
