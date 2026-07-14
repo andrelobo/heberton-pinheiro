@@ -69,8 +69,7 @@
 </head>
 
 <body>
-    <!-- Skip to content -->
-    <a href="#main-content" class="visually-hidden-focusable">Pular para o conteúdo principal</a>
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
 
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -397,7 +396,7 @@
             <div class="row justify-content-end">
                 <div class="col-lg-8 col-md-6">
                     <div class="d-flex align-items-center justify-content-center" style="height: 75px;">
-                        <p class="mb-0">&copy; <script>document.write(new Date().getFullYear())</script> <a class="text-white border-bottom" href="#">Heberton Pinheiro Treinamentos</a>. Todos os direitos reservados.</p>
+                        <p class="mb-0">&copy; <span id="current-year">2025</span> Heberton Pinheiro Treinamentos. Todos os direitos reservados.</p>
                     </div>
                 </div>
             </div>
@@ -428,9 +427,11 @@
     <!-- Template Javascript -->
     <script src="js/main.js" defer></script>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js" defer></script>
-    <script defer>
+    <script>
         document.addEventListener('DOMContentLoaded', function() {
             new window.VLibras.Widget('https://vlibras.gov.br/app');
+            var yearEl = document.getElementById('current-year');
+            if (yearEl) yearEl.textContent = new Date().getFullYear();
         });
     </script>
 

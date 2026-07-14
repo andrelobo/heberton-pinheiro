@@ -74,8 +74,7 @@
 </head>
 
 <body>
-    <!-- Skip to Content -->
-    <a href="#main-content" class="skip-to-content">Pular para o conteúdo principal</a>
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
 
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -404,11 +403,11 @@
 
     <!-- VLibras Init -->
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js" defer></script>
-    <script defer>
+    <script>
         document.addEventListener("DOMContentLoaded", function () {
             new window.VLibras.Widget('https://vlibras.gov.br/app');
-            var yearSpan = document.getElementById('currentYear');
-            if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+            var yearEl = document.getElementById('current-year');
+            if (yearEl) yearEl.textContent = new Date().getFullYear();
         });
     </script>
 </body>
