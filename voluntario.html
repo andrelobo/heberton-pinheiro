@@ -218,15 +218,62 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="bg-light rounded p-5 text-center d-flex flex-column justify-content-center h-100">
-                        <div class="mb-4">
-                            <i class="fa fa-heart fa-3x text-primary mb-3" aria-hidden="true"></i>
-                            <h3 class="mb-3">Quer fazer parte da nossa equipe?</h3>
-                            <p class="mb-4">Clique no botão abaixo para acessar nosso formulário de voluntariado no Typeform e nos conte como você gostaria de contribuir.</p>
+                    <form id="volunteer-form" action="https://formspree.io/f/SEU_ID_AQUI" method="POST" class="bg-light rounded p-5">
+                        <h3 class="mb-4 text-center">Preencha seus dados</h3>
+
+                        <div class="mb-3">
+                            <label for="vol-name" class="form-label fw-bold">Nome completo <span class="text-danger" aria-hidden="true">*</span></label>
+                            <input type="text" id="vol-name" name="name" class="form-control" placeholder="Seu nome completo" required aria-required="true">
                         </div>
-                        <!-- TODO: Substituir o link abaixo pelo URL real do formulário Typeform -->
-                        <a href="https://seutypeform.aqui" target="_blank" rel="noopener" class="btn btn-primary py-3 px-5">Preencher Formulário de Voluntariado</a>
-                    </div>
+
+                        <div class="row g-3 mb-3">
+                            <div class="col-md-6">
+                                <label for="vol-email" class="form-label fw-bold">E-mail <span class="text-danger" aria-hidden="true">*</span></label>
+                                <input type="email" id="vol-email" name="email" class="form-control" placeholder="seu@email.com" required aria-required="true">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="vol-phone" class="form-label fw-bold">Telefone / WhatsApp</label>
+                                <input type="tel" id="vol-phone" name="phone" class="form-control" placeholder="(92) 99999-0000">
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="vol-area" class="form-label fw-bold">Área de interesse <span class="text-danger" aria-hidden="true">*</span></label>
+                            <select id="vol-area" name="area_of_interest" class="form-select" required aria-required="true">
+                                <option value="" selected disabled>Selecione uma opção</option>
+                                <option value="Apoio em vídeos acessíveis">Apoio em vídeos acessíveis</option>
+                                <option value="Participação em eventos">Participação em eventos</option>
+                                <option value="Redes sociais e web">Redes sociais e web</option>
+                                <option value="Compartilhando vivências">Compartilhando vivências</option>
+                                <option value="Outra">Outra</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="vol-availability" class="form-label fw-bold">Disponibilidade</label>
+                            <select id="vol-availability" name="availability" class="form-select">
+                                <option value="" selected disabled>Selecione sua disponibilidade</option>
+                                <option value="Fim de semana">Fim de semana</option>
+                                <option value="Horário comercial">Horário comercial</option>
+                                <option value="Horário noturno">Horário noturno</option>
+                                <option value="Flexível">Flexível</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="vol-message" class="form-label fw-bold">Por que deseja ser voluntário?</label>
+                            <textarea id="vol-message" name="motivation" class="form-control" rows="4" placeholder="Conte um pouco sobre sua motivação e experiência..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100 py-3">
+                            <i class="fa fa-paper-plane me-2" aria-hidden="true"></i>Enviar Inscrição
+                        </button>
+
+                        <div id="vol-success" class="alert alert-success mt-3 text-center d-none" role="alert">
+                            <i class="fa fa-check-circle me-2" aria-hidden="true"></i>
+                            Inscrição enviada com sucesso! Entraremos em contato em breve.
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

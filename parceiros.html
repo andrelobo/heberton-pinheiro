@@ -270,15 +270,61 @@
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <div class="bg-light rounded p-5 text-center d-flex flex-column justify-content-center h-100">
-                            <div class="mb-4">
-                                <i class="fa fa-handshake fa-3x text-primary mb-3" aria-hidden="true"></i>
-                                <h3 class="mb-3">Interessado em parceria?</h3>
-                                <p class="mb-4">Clique no botão abaixo para acessar nosso formulário de parceria e nos conte sobre sua organização e como podemos trabalhar juntos.</p>
+                        <form id="partner-form" action="https://formspree.io/f/SEU_ID_AQUI" method="POST" class="bg-light rounded p-5">
+                            <h3 class="mb-4 text-center">Dados da Parceria</h3>
+
+                            <div class="mb-3">
+                                <label for="partner-company" class="form-label fw-bold">Nome da empresa / organização <span class="text-danger" aria-hidden="true">*</span></label>
+                                <input type="text" id="partner-company" name="company" class="form-control" placeholder="Razão social ou nome da organização" required aria-required="true">
                             </div>
-                            <!-- TODO: Substituir https://seutypeform.aqui pelo URL real do formulário de parceria -->
-                            <a href="https://seutypeform.aqui" target="_blank" rel="noopener noreferrer" class="btn btn-primary py-3 px-5">Solicitar Formulário de Parceria</a>
-                        </div>
+
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-6">
+                                    <label for="partner-contact" class="form-label fw-bold">Nome do contato <span class="text-danger" aria-hidden="true">*</span></label>
+                                    <input type="text" id="partner-contact" name="contact_name" class="form-control" placeholder="Nome completo" required aria-required="true">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="partner-role" class="form-label fw-bold">Cargo</label>
+                                    <input type="text" id="partner-role" name="role" class="form-control" placeholder="Seu cargo na empresa">
+                                </div>
+                            </div>
+
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-6">
+                                    <label for="partner-email" class="form-label fw-bold">E-mail <span class="text-danger" aria-hidden="true">*</span></label>
+                                    <input type="email" id="partner-email" name="email" class="form-control" placeholder="contato@empresa.com" required aria-required="true">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="partner-phone" class="form-label fw-bold">Telefone / WhatsApp</label>
+                                    <input type="tel" id="partner-phone" name="phone" class="form-control" placeholder="(92) 99999-0000">
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="partner-type" class="form-label fw-bold">Tipo de parceria <span class="text-danger" aria-hidden="true">*</span></label>
+                                <select id="partner-type" name="partnership_type" class="form-select" required aria-required="true">
+                                    <option value="" selected disabled>Selecione o tipo de parceria</option>
+                                    <option value="Corporativa">Parceria Corporativa</option>
+                                    <option value="Educacional">Parceria Educacional</option>
+                                    <option value="Institucional">Parceria Institucional</option>
+                                    <option value="Outro">Outro</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="partner-message" class="form-label fw-bold">Como sua organização pode contribuir?</label>
+                                <textarea id="partner-message" name="contribution" class="form-control" rows="4" placeholder="Descreva como gostaria de colaborar, projetos em mente, ou qualquer informação relevante..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary w-100 py-3">
+                                <i class="fa fa-handshake me-2" aria-hidden="true"></i>Enviar Proposta de Parceria
+                            </button>
+
+                            <div id="partner-success" class="alert alert-success mt-3 text-center d-none" role="alert">
+                                <i class="fa fa-check-circle me-2" aria-hidden="true"></i>
+                                Proposta enviada com sucesso! Entraremos em contato em breve.
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

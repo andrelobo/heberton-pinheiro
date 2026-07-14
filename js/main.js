@@ -120,6 +120,33 @@
             }
         }
     });
+
+    // Form handling (Formspree AJAX)
+    $('form[id$="-form"]').on('submit', function(e) {
+        e.preventDefault();
+        var form = $(this);
+        var formId = form.attr('id');
+        var submitBtn = form.find('button[type="submit"]');
+        var originalText = submitBtn.html();
+
+        submitBtn.prop('disabled', true).html('<i class="fa fa-spinner fa-spin me-2" aria-hidden="true"></i>Enviando...');
+
+        $.ajax({
+            url: form.attr('action'),
+            method: 'POST',
+            data: form.serialize(),
+            dataType: 'json',
+            success: function() {
+                form[0].reset();
+                submitBtn.prop('disabled', false).html(originalText);
+                $('#' + formId.replace('-form', '-success')).removeClass('d-none').attr('tabindex', '-1').focus();
+            },
+            error: function() {
+                submitBtn.prop('disabled', false).html(originalText);
+                alert('Erro ao enviar. Tente novamente ou entre em contato pelo WhatsApp.');
+            }
+        });
+    });
     
 })(jQuery);
 
