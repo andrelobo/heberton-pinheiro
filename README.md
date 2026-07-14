@@ -1,9 +1,9 @@
-# Heberton Pinheiro Treinamentos
+# Heberton Pinheiro Consultoria e Treinamento
 
 ![Banner](img/carousel-1.jpg)
 
 ## Visão Geral
-Site institucional profissional para a **Heberton Pinheiro Treinamentos**, especializada em inclusão social através do ensino e difusão da Língua Brasileira de Sinais (Libras). Deploy na Vercel em [hebertonpinheiro.com](https://hebertonpinheiro.com).
+Site institucional profissional para a **Heberton Pinheiro Consultoria e Treinamento**, especializada em inclusão social através do ensino e difusão da Língua Brasileira de Sinais (Libras). Deploy na Vercel em [hebertonpinheiro.com](https://hebertonpinheiro.com).
 
 ## Recursos Principais
 - **WhatsApp Integrado** em todos os CTAs
@@ -88,4 +88,4 @@ heberton-pinheiro/
 - 📧 heberton.pinheiro.silva@gmail.com
 
 ---
-© 2025 Heberton Pinheiro Treinamentos. Todos os direitos reservados.
+© 2025 Heberton Pinheiro Consultoria e Treinamento. Todos os direitos reservados.

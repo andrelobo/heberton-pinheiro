@@ -1,7 +1,7 @@
-# Context — Heberton Pinheiro Treinamentos
+# Context — Heberton Pinheiro Consultoria e Treinamento
 
 ## Visão Geral
-Site institucional estático para a **Heberton Pinheiro Treinamentos**, consultoria especializada em inclusão social, acessibilidade e Língua Brasileira de Sinais (Libras). O site é hospedado na Vercel e acessível em `hebertonpinheiro.com`.
+Site institucional estático para a **Heberton Pinheiro Consultoria e Treinamento**, consultoria especializada em inclusão social, acessibilidade e Língua Brasileira de Sinais (Libras). O site é hospedado na Vercel e acessível em `hebertonpinheiro.com`.
 
 ## Stack
 - **HTML5** — Páginas estáticas (sem gerador de build)
