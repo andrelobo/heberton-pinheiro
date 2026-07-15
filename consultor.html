@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+<script>document.documentElement.setAttribute('data-theme',localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'))</script>
 
 <head>
     <meta charset="utf-8">
@@ -124,6 +125,10 @@
                     <a href="voluntario.html" class="nav-item nav-link">Seja Voluntário</a>
                     <a href="parceiros.html" class="nav-item nav-link ">Parceiros</a>
                 </div>
+                <button type="button" class="theme-toggle ms-3" aria-label="Alternar tema claro/escuro">
+                    <i class="fa fa-moon icon-moon" aria-hidden="true"></i>
+                    <i class="fa fa-sun icon-sun" aria-hidden="true"></i>
+                </button>
                 <button type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal" aria-label="Pesquisar"><i class="fa fa-search" aria-hidden="true"></i></button>
                 <a href="https://wa.me/5592984392169" target="_blank" rel="noopener" class="btn btn-primary py-2 px-4 ms-3">Fale Conosco</a>
             </div>

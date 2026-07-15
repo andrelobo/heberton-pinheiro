@@ -62,31 +62,41 @@ heberton-pinheiro/
 | `parceiros.html` | Parceiros atuais + formulário de parceria |
 | `vagas-inclusivas.html` | Portal de vagas inclusivas com filtros |
 
-## Design System Premium v2 (`css/style.css`)
+## Design System Premium v3 (`css/style.css`)
 
 ### Design Tokens (CSS Custom Properties)
-- **Cores:** Paleta azul completa (`--blue-50` a `--blue-950`), `--primary: #044e91`, `--accent: #00c2ff`
-- **Sombras:** 8 níveis (`--shadow-xs` a `--shadow-2xl`) + `--shadow-glow`
-- **Border radius:** 6 níveis (`--radius-xs: 6px` a `--radius-full: 9999px`)
-- **Transições:** 3 velocidades com `cubic-bezier` custom (`--transition-fast`, `--transition-base`, `--transition-slow`)
-- **Backgrounds:** `--bg-page: #f4f7fc`, `--bg-hero: linear-gradient(160deg, ...)`
+- **Paleta Light:** `--primary: #2563eb`, `--accent: #38bdf8`, `--bg-page: #f8fafc`
+- **Paleta Dark:** `--primary: #3b82f6`, `--bg-page: #0b1120`, `--surface: #111827`
+- **Sombras:** 8 níveis (`--shadow-xs` a `--shadow-2xl`) + `--shadow-glow` + `--shadow-glow-accent`
+- **Border radius:** 6 níveis (`--radius-xs: 8px` a `--radius-full: 9999px`)
+- **Transições:** 3 velocidades com `cubic-bezier` custom
+- **Tema:** `[data-theme="dark"]` com tokens separados para cada tema
 
 ### Componentes Estilizados
-- **Navbar:** Background sólido `--primary`, nav links com underline animado, sticky com `backdrop-filter: blur(20px)`
-- **Cards:** `.feature-card`, `.service-item`, `.qualification-item`, `.partner-card`, `.team-item` — hover com `translateY(-8px)` + `shadow-xl`
+- **Navbar:** Background sólido `--primary`, nav links com underline animado, sticky com `backdrop-filter: blur(24px)`
+- **Cards:** `.feature-card`, `.service-item`, `.qualification-item`, `.partner-card`, `.team-item` — hover com `translateY(-8px)` + `shadow-xl` + `shadow-glow`
 - **Service icons:** Rotação -45deg com gradiente
 - **Footer:** Cards com `border-radius: var(--radius-lg)`
-- **Botões:** Gradiente, sombra colorida, hover com `translateY(-2px)`
+- **Botões:** Gradiente `--primary` → `--primary-light`, sombra colorida, hover com glow
 - **Section titles:** Linha gradiente animada com dot
-- **Hero header:** Gradiente de fundo com radials decorativos
-- **Back to top:** Gradiente fixo no canto inferior direito
+- **Hero header:** Gradiente com blobs decorativos animados (`hero-blob` keyframes)
+- **Back to top:** Gradiente `--primary` → `--accent`
+- **Theme toggle:** Botão circular com ícones sun/moon, hover com rotação
+
+### Dark Blue Theme
+- Toggle na navbar de todas as páginas (ícone sun/moon)
+- Script inline no `<head>` previne flash de tema errado
+- `localStorage` salva preferência do usuário
+- Respeita `prefers-color-scheme` no primeiro acesso
+- Transição suave via classe `.theme-transition`
+- Ajustes específicos: `.bg-light`, `.text-muted`, imagens, forms, footer
 
 ### Acessibilidade no CSS
 - **Skip link:** `.skip-link` — aparece no focus com `top: 0`
 - **Focus visible:** `outline: 3px solid var(--accent)` em todos os elementos interativos
 - **Reduced motion:** `@media (prefers-reduced-motion: reduce)` — desabilita animações
 - **High contrast:** `@media (prefers-contrast: high)` — aumenta bordas e contraste
-- **Print:** `@media print` — oculta navbar, footer, VLibras, spinner
+- **Print:** `@media print` — oculta navbar, footer, VLibras, spinner, theme toggle
 
 ## Convenções de Código
 - Lang: `pt-BR`
@@ -148,24 +158,41 @@ heberton-pinheiro/
 - `robots.txt` criado
 - `README.md` atualizado
 
-### Design System Premium v2
-- CSS completamente reescrito com design tokens
-- Navbar com glass morphism (backdrop-filter blur)
-- Cards com hover premium (shadow-xl, translateY)
-- Service icons com gradiente e rotação
-- Section titles com linha animada
-- Hero headers com gradiente e radials decorativos
-- Botões com gradiente e sombra
-- Footer cards com border-radius
-- Suporte a `prefers-reduced-motion` e `prefers-contrast: high`
-- Print styles
+### Design System Premium v3 (Dark Mode)
+- Paleta de cores atualizada: `--primary: #2563eb`, `--accent: #38bdf8`
+- Dark blue theme completo com `[data-theme="dark"]`
+- Toggle sun/moon na navbar de todas as páginas (9 páginas)
+- Script inline no `<head>` previne flash de tema errado
+- `localStorage` salva preferência, respeita `prefers-color-scheme`
+- Transição suave entre temas (classe `.theme-transition`)
+- Blobs decorativos animados no hero header (`hero-blob` keyframes)
+- Sombras com glow colorido (`--shadow-glow`, `--shadow-glow-accent`)
+- Cards, botões e componentes com visual mais moderno
+- Print styles incluem ocultação do theme toggle
+
+### Imagens
+- Otimização para WebP + fallback JPEG em todas as imagens principais
+- `turma_libras_no_comercio_turma01` adicionada na seção Treinamentos
+- 32 imagens não utilizadas removidas (redução de ~75% na pasta img/)
+- `andrelobo.png` otimizada e adicionada à seção Nossa Equipe
+
+### Formulários
+- Formulário de voluntariado (`voluntario.html`) — campos: nome, email, telefone, área de interesse, disponibilidade, motivação
+- Formulário de parceria (`parceiros.html`) — campos: empresa, contato, cargo, email, telefone, tipo de parceria, contribuição
+- AJAX submission via Formspree com mensagem de sucesso
+- CSS consistente com Design System v3
+
+### Equipe
+- André Lobo adicionado à seção Nossa Equipe (index.html)
+- Cargo: Tecnologia
+- LinkedIn: linkedin.com/in/andreloboweb
 
 ### Nome da Empresa
 - Atualizado de "Heberton Pinheiro Treinamentos" para "Heberton Pinheiro Consultoria e Treinamento" em todos os arquivos (36 ocorrências, 12 arquivos)
 
 ## Git
-- **Último commit:** `f13ff55` — fix: remove partner logos section with missing images
-- **Commits anteriores:** `27e27be` (copyright year 2025→2026), `66b5785` (company name update), `77324b7` (premium design system v2), `f8055c6` (bug fixes + accessibility + SEO)
+- **Último commit:** `5e51944` — fix: atualiza cargo do André Lobo para Tecnologia
+- **Commits recentes:** `5966099` (LinkedIn André Lobo), `7b3653d` (adiciona André Lobo ao time), `cb5f009` (formulários customizados), `dd6160a` (otimização de imagens)
 
 ## Deploy
 - **Plataforma:** Vercel (deploy automático via GitHub)
@@ -173,5 +200,5 @@ heberton-pinheiro/
 - **Config:** `vercel.json` com redirects
 
 ## Pendências / Próximos Passos
-- [ ] Formulário de voluntariado (`voluntario.html`) — link placeholder `https://seutypeform.aqui` será substituído pelo formulário próprio (em desenvolvimento)
-- [ ] Formulário de parceria (`parceiros.html`) — link placeholder será substituído pelo formulário próprio (em desenvolvimento)
+- [ ] Formulários: configurar ID do Formspree (substituir `SEU_ID_AQUI` nos forms de voluntariado e parceria)
+- [ ] André Lobo: confirmar cargo exato (atualmente "Tecnologia")
