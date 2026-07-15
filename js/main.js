@@ -1,24 +1,6 @@
 (function ($) {
     "use strict";
 
-    // Dark Mode Toggle
-    (function initTheme() {
-        var saved = localStorage.getItem('theme');
-        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        var theme = saved || (prefersDark ? 'dark' : 'light');
-        document.documentElement.setAttribute('data-theme', theme);
-    })();
-
-    $(document).on('click', '.theme-toggle', function() {
-        var html = document.documentElement;
-        var current = html.getAttribute('data-theme');
-        var next = current === 'dark' ? 'light' : 'dark';
-        html.classList.add('theme-transition');
-        html.setAttribute('data-theme', next);
-        localStorage.setItem('theme', next);
-        setTimeout(function() { html.classList.remove('theme-transition'); }, 400);
-    });
-
     // Spinner
     var spinner = function () {
         setTimeout(function () {

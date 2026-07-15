@@ -5,7 +5,7 @@ Site institucional estático para a **Heberton Pinheiro Consultoria e Treinament
 
 ## Stack
 - **HTML5** — Páginas estáticas (sem gerador de build)
-- **CSS3 / Bootstrap 5.0.0** — Layout responsivo com Design System premium v2
+- **CSS3 / Bootstrap 5.0.0** — Layout responsivo com Design System premium v3
 - **JavaScript (jQuery 3.4.1)** — Interações e plugins
 - **OWL Carousel** — Carrosséis
 - **WOW.js** — Animações ao scroll
@@ -19,7 +19,7 @@ Site institucional estático para a **Heberton Pinheiro Consultoria e Treinament
 heberton-pinheiro/
 ├── css/
 │   ├── bootstrap.min.css
-│   └── style.css              # Design System premium v2
+│   └── style.css              # Design System premium v3
 ├── img/                       # Imagens do site
 ├── js/
 │   └── main.js                # Script principal
@@ -65,15 +65,15 @@ heberton-pinheiro/
 ## Design System Premium v3 (`css/style.css`)
 
 ### Design Tokens (CSS Custom Properties)
-- **Paleta Light:** `--primary: #2563eb`, `--accent: #38bdf8`, `--bg-page: #f8fafc`
-- **Paleta Dark:** `--primary: #3b82f6`, `--bg-page: #0b1120`, `--surface: #111827`
+- **Paleta:** `--primary: #2563eb`, `--accent: #38bdf8`, `--bg-page: #f8fafc`, `--surface: #ffffff`
 - **Sombras:** 8 níveis (`--shadow-xs` a `--shadow-2xl`) + `--shadow-glow` + `--shadow-glow-accent`
 - **Border radius:** 6 níveis (`--radius-xs: 8px` a `--radius-full: 9999px`)
 - **Transições:** 3 velocidades com `cubic-bezier` custom
-- **Tema:** `[data-theme="dark"]` com tokens separados para cada tema
 
 ### Componentes Estilizados
 - **Navbar:** Background sólido `--primary`, nav links com underline animado, sticky com `backdrop-filter: blur(24px)`
+- **Logo navbar:** `img/logo.png` (300×300) com `height: 2.2em`
+- **Logo footer:** `img/logo.png` (300×300) com `height: 1.8em` em `h1.text-white`
 - **Cards:** `.feature-card`, `.service-item`, `.qualification-item`, `.partner-card`, `.team-item` — hover com `translateY(-8px)` + `shadow-xl` + `shadow-glow`
 - **Service icons:** Rotação -45deg com gradiente
 - **Footer:** Cards com `border-radius: var(--radius-lg)`
@@ -81,22 +81,13 @@ heberton-pinheiro/
 - **Section titles:** Linha gradiente animada com dot
 - **Hero header:** Gradiente com blobs decorativos animados (`hero-blob` keyframes)
 - **Back to top:** Gradiente `--primary` → `--accent`
-- **Theme toggle:** Botão circular com ícones sun/moon, hover com rotação
-
-### Dark Blue Theme
-- Toggle na navbar de todas as páginas (ícone sun/moon)
-- Script inline no `<head>` previne flash de tema errado
-- `localStorage` salva preferência do usuário
-- Respeita `prefers-color-scheme` no primeiro acesso
-- Transição suave via classe `.theme-transition`
-- Ajustes específicos: `.bg-light`, `.text-muted`, imagens, forms, footer
 
 ### Acessibilidade no CSS
 - **Skip link:** `.skip-link` — aparece no focus com `top: 0`
 - **Focus visible:** `outline: 3px solid var(--accent)` em todos os elementos interativos
 - **Reduced motion:** `@media (prefers-reduced-motion: reduce)` — desabilita animações
 - **High contrast:** `@media (prefers-contrast: high)` — aumenta bordas e contraste
-- **Print:** `@media print` — oculta navbar, footer, VLibras, spinner, theme toggle
+- **Print:** `@media print` — oculta navbar, footer, VLibras, spinner
 
 ## Convenções de Código
 - Lang: `pt-BR`
@@ -158,17 +149,23 @@ heberton-pinheiro/
 - `robots.txt` criado
 - `README.md` atualizado
 
-### Design System Premium v3 (Dark Mode)
+### Design System Premium v3
 - Paleta de cores atualizada: `--primary: #2563eb`, `--accent: #38bdf8`
-- Dark blue theme completo com `[data-theme="dark"]`
-- Toggle sun/moon na navbar de todas as páginas (9 páginas)
-- Script inline no `<head>` previne flash de tema errado
-- `localStorage` salva preferência, respeita `prefers-color-scheme`
-- Transição suave entre temas (classe `.theme-transition`)
 - Blobs decorativos animados no hero header (`hero-blob` keyframes)
 - Sombras com glow colorido (`--shadow-glow`, `--shadow-glow-accent`)
 - Cards, botões e componentes com visual mais moderno
-- Print styles incluem ocultação do theme toggle
+
+### Dark Mode Removido
+- Todos os tokens `[data-theme="dark"]` removidos do CSS
+- Toggle sun/moon removido da navbar em todas as páginas (9 páginas)
+- Script inline anti-flash removido do `<head>` em todas as páginas
+- Classe `.theme-transition` e lógica JS removidas
+- Ajustes específicos de dark mode removidos (`.bg-light`, `.text-muted`, imagens, forms, footer)
+- `localStorage` e `prefers-color-scheme` lógica removida do JS
+
+### Logo Corrigida
+- Navbar: `logo.png` (300×300) com `height: 2.2em` (era 1em)
+- Footer: `logo.png` substituindo ícone `fa-hands-helping` em todas as 9 páginas
 
 ### Imagens
 - Otimização para WebP + fallback JPEG em todas as imagens principais
@@ -201,4 +198,3 @@ heberton-pinheiro/
 
 ## Pendências / Próximos Passos
 - [ ] Formulários: configurar ID do Formspree (substituir `SEU_ID_AQUI` nos forms de voluntariado e parceria)
-- [ ] André Lobo: confirmar cargo exato (atualmente "Tecnologia")

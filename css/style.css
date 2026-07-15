@@ -1,6 +1,6 @@
 /* ============================================
    Heberton Pinheiro Consultoria e Treinamento
-   Premium Design System v3 — Modern + Dark
+   Premium Design System v3 — Modern
    ============================================ */
 
 /* ── Design Tokens (Light) ── */
@@ -63,56 +63,8 @@
     --transition-slow: 0.5s var(--ease-out);
 }
 
-/* ── Design Tokens (Dark Blue) ── */
-[data-theme="dark"] {
-    --primary: #3b82f6;
-    --primary-hover: #60a5fa;
-    --primary-light: #93c5fd;
-    --primary-glow: rgba(59, 130, 246, 0.15);
-
-    --accent: #38bdf8;
-    --accent-soft: rgba(56, 189, 248, 0.12);
-
-    --surface: #111827;
-    --surface-elevated: #1e293b;
-    --bg-page: #0b1120;
-    --bg-subtle: #111827;
-    --bg-hero: linear-gradient(135deg, #020617 0%, #0f172a 35%, #1e3a5f 100%);
-
-    --text-primary: #f1f5f9;
-    --text-secondary: #94a3b8;
-    --text-muted: #64748b;
-    --text-on-dark: #f8fafc;
-    --text-on-primary: #ffffff;
-
-    --border: #1e293b;
-    --border-light: #1e293b;
-
-    --shadow-xs: 0 1px 2px rgba(0,0,0,0.2);
-    --shadow-sm: 0 1px 3px rgba(0,0,0,0.3), 0 1px 2px rgba(0,0,0,0.2);
-    --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.35), 0 2px 4px -2px rgba(0,0,0,0.25);
-    --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.4), 0 4px 6px -4px rgba(0,0,0,0.2);
-    --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.4), 0 8px 10px -6px rgba(0,0,0,0.2);
-    --shadow-2xl: 0 25px 50px -12px rgba(0,0,0,0.5);
-    --shadow-glow: 0 0 40px rgba(59, 130, 246, 0.15);
-    --shadow-glow-accent: 0 0 30px rgba(56, 189, 248, 0.2);
-}
-
-/* ── Theme Transition ── */
 html {
     scroll-behavior: smooth;
-    transition: background-color 0.4s var(--ease-out), color 0.4s var(--ease-out);
-}
-
-body {
-    transition: background-color 0.4s var(--ease-out), color 0.4s var(--ease-out);
-}
-
-.theme-transition,
-.theme-transition *,
-.theme-transition *::before,
-.theme-transition *::after {
-    transition: background-color 0.4s var(--ease-out), color 0.4s var(--ease-out), border-color 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out) !important;
 }
 
 /* ── Reset & Base ── */
@@ -280,38 +232,6 @@ p { margin-bottom: 1rem; }
     text-align: center;
     border-radius: var(--radius-sm);
 }
-
-/* ── Theme Toggle ── */
-.theme-toggle {
-    background: rgba(255,255,255,0.1);
-    border: 2px solid rgba(255,255,255,0.2);
-    color: #fff;
-    width: 38px;
-    height: 38px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: var(--radius-full);
-    cursor: pointer;
-    transition: all var(--transition-fast);
-    font-size: 1rem;
-    padding: 0;
-    line-height: 1;
-}
-
-.theme-toggle:hover {
-    background: rgba(255,255,255,0.2);
-    border-color: rgba(255,255,255,0.4);
-    transform: rotate(30deg) scale(1.1);
-}
-
-.theme-toggle .icon-sun,
-.theme-toggle .icon-moon {
-    display: none;
-}
-
-[data-theme="light"] .theme-toggle .icon-moon { display: inline; }
-[data-theme="dark"] .theme-toggle .icon-sun { display: inline; }
 
 /* ── Navbar ── */
 .navbar-dark {
@@ -841,17 +761,6 @@ form .form-select {
     color: var(--text-primary);
 }
 
-[data-theme="dark"] form .form-control,
-[data-theme="dark"] form .form-select {
-    background: var(--surface-elevated);
-    border-color: var(--border);
-    color: var(--text-primary);
-}
-
-[data-theme="dark"] form .form-control::placeholder {
-    color: var(--text-muted);
-}
-
 form .form-control:focus,
 form .form-select:focus {
     border-color: var(--primary);
@@ -914,39 +823,6 @@ form .alert-success {
     .navbar-brand img { height: 0.9em; }
 }
 
-/* ── Dark Theme Specifics ── */
-[data-theme="dark"] .bg-light {
-    background-color: var(--surface-elevated) !important;
-}
-
-[data-theme="dark"] .text-muted {
-    color: var(--text-muted) !important;
-}
-
-[data-theme="dark"] .rounded-4 {
-    border-color: var(--border);
-}
-
-[data-theme="dark"] .container-fluid.bg-dark {
-    background: #060d19 !important;
-}
-
-[data-theme="dark"] .footer-about > div.bg-primary {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-hover) 100%) !important;
-}
-
-[data-theme="dark"] img {
-    filter: brightness(0.95);
-}
-
-[data-theme="dark"] .partner-card img {
-    filter: grayscale(30%) opacity(0.8) brightness(0.9);
-}
-
-[data-theme="dark"] .partner-card:hover img {
-    filter: grayscale(0%) opacity(1) brightness(1);
-}
-
 /* ── Reduced Motion ── */
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
@@ -972,5 +848,5 @@ form .alert-success {
 
 /* ── Print ── */
 @media print {
-    .navbar, .back-to-top, .footer-about, [vw], #spinner, .theme-toggle { display: none !important; }
+    .navbar, .back-to-top, .footer-about, [vw], #spinner { display: none !important; }
 }
