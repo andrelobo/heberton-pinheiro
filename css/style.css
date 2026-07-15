@@ -222,6 +222,19 @@ p { margin-bottom: 1rem; }
     transform: translateY(-2px);
 }
 
+.btn-whatsapp {
+    background: #25D366;
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
+}
+
+.btn-whatsapp:hover {
+    background: #20bd5a;
+    color: #fff;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+    transform: translateY(-2px);
+}
+
 .btn-square { width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; }
 .btn-sm-square { width: 34px; height: 34px; display: inline-flex; align-items: center; justify-content: center; }
 .btn-lg-square { width: 52px; height: 52px; display: inline-flex; align-items: center; justify-content: center; }
