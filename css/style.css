@@ -282,9 +282,32 @@ p { margin-bottom: 1rem; }
     transition: var(--transition-fast);
 }
 
-.navbar-dark .navbar-toggler:hover {
-    border-color: rgba(255,255,255,0.6) !important;
-}
+    .navbar-dark .navbar-toggler:hover {
+        border-color: rgba(255,255,255,0.6) !important;
+    }
+
+    .navbar-dark .dropdown-menu {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0 0 0 16px;
+        position: static;
+    }
+
+    .navbar-dark .dropdown-item {
+        color: rgba(255,255,255,0.85) !important;
+        padding: 10px 0;
+    }
+
+    .navbar-dark .dropdown-item:hover,
+    .navbar-dark .dropdown-item:focus {
+        color: #ffffff !important;
+        background: transparent;
+    }
+
+    .navbar-dark .dropdown-toggle::after {
+        border-top-color: rgba(255,255,255,0.85);
+    }
 
 @media (max-width: 991.98px) {
     .navbar-dark {
@@ -340,6 +363,58 @@ p { margin-bottom: 1rem; }
         opacity: 1;
         background: #fff;
     }
+}
+
+/* ── Nav Hierarchy ── */
+.navbar-dark .navbar-nav .nav-link.nav-primary {
+    font-weight: 800;
+    color: #ffffff !important;
+}
+
+.navbar-dark .dropdown-toggle::after {
+    display: inline-block;
+    margin-left: 4px;
+    vertical-align: middle;
+    content: "";
+    border-top: 0.35em solid currentColor;
+    border-right: 0.3em solid transparent;
+    border-left: 0.3em solid transparent;
+    transition: transform var(--transition-fast);
+}
+
+.navbar-dark .dropdown-toggle[aria-expanded="true"]::after {
+    transform: rotate(180deg);
+}
+
+.navbar-dark .dropdown-menu {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-lg);
+    padding: 8px;
+    margin-top: 4px;
+    min-width: 180px;
+}
+
+.navbar-dark .dropdown-item {
+    color: var(--text-primary);
+    padding: 10px 16px;
+    border-radius: var(--radius-xs);
+    font-weight: 600;
+    font-size: 14px;
+    transition: all var(--transition-fast);
+    font-family: 'Nunito', sans-serif;
+}
+
+.navbar-dark .dropdown-item:hover,
+.navbar-dark .dropdown-item:focus {
+    background: var(--primary-glow);
+    color: var(--primary);
+}
+
+.navbar-dark .dropdown-item.active {
+    color: var(--primary);
+    font-weight: 700;
 }
 
 /* ── Carousel ── */
