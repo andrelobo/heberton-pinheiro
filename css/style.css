@@ -236,7 +236,7 @@ p { margin-bottom: 1rem; }
 /* ── Navbar ── */
 .navbar-dark {
     transition: all 0.4s var(--ease-out);
-    background-color: var(--primary);
+    background-color: #004e90;
     padding: 0;
 }
 
