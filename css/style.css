@@ -387,7 +387,7 @@ p { margin-bottom: 1rem; }
 }
 
 .navbar-dark .dropdown-menu {
-    background: var(--surface);
+    background: var(--surface) !important;
     border: 1px solid var(--border);
     border-radius: var(--radius-sm);
     box-shadow: var(--shadow-lg);
@@ -397,7 +397,7 @@ p { margin-bottom: 1rem; }
 }
 
 .navbar-dark .dropdown-item {
-    color: var(--text-primary);
+    color: var(--text-primary) !important;
     padding: 10px 16px;
     border-radius: var(--radius-xs);
     font-weight: 600;
@@ -408,12 +408,12 @@ p { margin-bottom: 1rem; }
 
 .navbar-dark .dropdown-item:hover,
 .navbar-dark .dropdown-item:focus {
-    background: var(--primary-glow);
-    color: var(--primary);
+    background: var(--primary-glow) !important;
+    color: var(--primary) !important;
 }
 
 .navbar-dark .dropdown-item.active {
-    color: var(--primary);
+    color: var(--primary) !important;
     font-weight: 700;
 }
 
