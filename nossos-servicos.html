@@ -105,7 +105,7 @@
     <div class="container-fluid position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0" aria-label="Navegação principal">
             <a href="index.html" class="navbar-brand p-0">
-                <p class="m-0"><img src="img/logo.png" alt="Logo" class="me-2" style="height: 2.2em;" loading="lazy">Heberton Pinheiro</p>
+                <p class="m-0"><img src="img/logo.png" alt="Logo Heberton Pinheiro" class="me-2" style="height: 2.2em;" loading="lazy">Heberton Pinheiro</p>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Abrir menu de navegação">
                 <span class="fa fa-bars" aria-hidden="true"></span>
@@ -135,13 +135,14 @@
     <!-- Navbar End -->
 
     <!-- Full Screen Search Start -->
-    <div class="modal fade" id="searchModal" tabindex="-1">
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
                 <div class="modal-header border-0">
                     <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Fechar busca"></button>
                 </div>
                 <div class="modal-body d-flex align-items-center justify-content-center">
+                    <span id="searchModalLabel" class="visually-hidden">Buscar no site</span>
                     <form role="search" aria-label="Busca no site">
                         <div class="input-group" style="max-width: 600px;">
                             <label for="search-input" class="visually-hidden">O que você procura?</label>

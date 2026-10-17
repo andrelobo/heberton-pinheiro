@@ -128,6 +128,7 @@
                     </li>
                 </div>
 
+                <button type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal" aria-label="Abrir busca"><i class="fa fa-search" aria-hidden="true"></i></button>
                 <a href="https://wa.me/5592984392169" target="_blank" rel="noopener" class="btn btn-whatsapp py-2 px-4 ms-3"><i class="fab fa-whatsapp me-1"></i>WhatsApp</a>
             </div>
         </nav>
@@ -151,6 +152,26 @@
     <!-- Header End -->
 
     <!-- Main Content Start -->
+    <!-- Full Screen Search Start -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Fechar busca"></button>
+                </div>
+                <div class="modal-body d-flex align-items-center justify-content-center">
+                    <span id="searchModalLabel" class="visually-hidden">Buscar no site</span>
+                    <form role="search" class="input-group" style="max-width: 600px;">
+                        <label for="search-input-voluntario" class="visually-hidden">Buscar no site</label>
+                        <input type="text" id="search-input-voluntario" class="form-control bg-transparent border-primary p-3" placeholder="O que você procura?">
+                        <button class="btn btn-primary px-4" type="submit" aria-label="Buscar"><i class="bi bi-search" aria-hidden="true"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Full Screen Search End -->
+
     <main id="main-content">
 
     <!-- Tipos de Voluntariado Start -->
