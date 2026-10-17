@@ -202,9 +202,18 @@ heberton-pinheiro/
 ### Footer
 - Logo: removido `bg-primary`, padronizado logo e alt text
 
+### Auditoria de Código (2026-10-17)
+- **Modais de busca:** adicionado `#searchModal` completo em `parceiros.html`, `vagas-inclusivas.html`, `videos.html` e `voluntario.html` (botão existia mas o modal não — não abria)
+- **ARIA:** todos os modais com `aria-labelledby="searchModalLabel"` + `aria-hidden="true"` + `<span id="searchModalLabel" class="visually-hidden">`
+- **Alt padronizado:** `alt="Logo"` → `alt="Logo Heberton Pinheiro"` (6 páginas)
+- **Sitemap:** adicionadas `parceiros.html` e `vagas-inclusivas.html`; `lastmod` atualizado
+- **Falso positivo:** `videos/grupo_britania.mp4` está dentro de bloco comentado em `videos.html` — não é bug
+- **Falso positivo:** imagens `.webp` estão referenciadas via `<picture>` — não são órfãs
+- **Conhecido (pendente):** busca do modal não tem handler JS (nenhuma página) — funcionalidade futura; Formspree com placeholder `SEU_ID_AQUI`
+
 ## Git
-- **Último commit:** `64cb8d3` — fix: substitui logo Instituto Mãos pela versão cortada
-- **Commits recentes:** `986ea9e` (logo recortada), `27cc7aa` (legenda Instituto Mãos), `79195da` (logo versão correta), `148d175` (adiciona Instituto Mãos), `b15ef60` (fix footer), `5b41808` (botão WhatsApp nav), `24c7a10` (nav order), `d9afcb2` (dropdown cores), `b31be64` (hierarquia nav)
+- **Último commit:** `0ee256a` — fix: acessibilidade e consistência (modais de busca, alt, sitemap)
+- **Commits recentes:** `dc2390f` (context.md), `64cb8d3` (logo Instituto Mãos recortada), `27cc7aa` (legenda), `148d175` (adiciona parceiro)
 
 ## Deploy
 - **Plataforma:** Vercel (deploy automático via GitHub)
@@ -213,3 +222,4 @@ heberton-pinheiro/
 
 ## Pendências / Próximos Passos
 - [ ] Formulários: configurar ID do Formspree (substituir `SEU_ID_AQUI` nos forms de voluntariado e parceria)
+- [ ] Busca do modal: implementar handler JS (hoje o modal abre, mas o submit não busca nada)
