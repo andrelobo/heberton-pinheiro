@@ -59,7 +59,7 @@ heberton-pinheiro/
 | `contact.html` | Contato + mapa Google |
 | `videos.html` | Vídeos educativos com Video.js |
 | `voluntario.html` | Formulário de voluntariado (Typeform placeholder) |
-| `parceiros.html` | Parceiros atuais + formulário de parceria |
+| `parceiros.html` | Parceiros atuais (Instituto Mãos, Britânia-Philco, NG Contabilidade) + formulário de parceria |
 | `vagas-inclusivas.html` | Portal de vagas inclusivas com filtros |
 
 ## Design System Premium v3 (`css/style.css`)
@@ -187,9 +187,24 @@ heberton-pinheiro/
 ### Nome da Empresa
 - Atualizado de "Heberton Pinheiro Treinamentos" para "Heberton Pinheiro Consultoria e Treinamento" em todos os arquivos (36 ocorrências, 12 arquivos)
 
+### Parceiros
+- **Instituto Mãos** adicionado como parceiro em `parceiros.html`, antes da Britânia-Philco (card com logo, nome e legenda)
+- Legenda: "Na luta contra o câncer"
+- Logo: `img/instituto-maos.jpg` (1000×706, recortada — removida frase sem sentido do original)
+- Ordem dos cards: Instituto Mãos → Britânia-Philco → NG Contabilidade
+
+### Navbar (hierarquia e CTAs)
+- Botão WhatsApp verde (#25D366) com ícone no nav
+- "Nossos Serviços" movido antes de "Consultor" no nav
+- Dropdown "Mais" (Voluntário/Parceiros) com cores forçadas para legibilidade
+- Hierarquia visual: links primários (Serviços, Contato) em bold
+
+### Footer
+- Logo: removido `bg-primary`, padronizado logo e alt text
+
 ## Git
-- **Último commit:** `5e51944` — fix: atualiza cargo do André Lobo para Tecnologia
-- **Commits recentes:** `5966099` (LinkedIn André Lobo), `7b3653d` (adiciona André Lobo ao time), `cb5f009` (formulários customizados), `dd6160a` (otimização de imagens)
+- **Último commit:** `64cb8d3` — fix: substitui logo Instituto Mãos pela versão cortada
+- **Commits recentes:** `986ea9e` (logo recortada), `27cc7aa` (legenda Instituto Mãos), `79195da` (logo versão correta), `148d175` (adiciona Instituto Mãos), `b15ef60` (fix footer), `5b41808` (botão WhatsApp nav), `24c7a10` (nav order), `d9afcb2` (dropdown cores), `b31be64` (hierarquia nav)
 
 ## Deploy
 - **Plataforma:** Vercel (deploy automático via GitHub)
