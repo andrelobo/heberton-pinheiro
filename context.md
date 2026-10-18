@@ -176,7 +176,7 @@ heberton-pinheiro/
 ### Formulários
 - Formulário de voluntariado (`voluntario.html`) — campos: nome, email, telefone, área de interesse, disponibilidade, motivação
 - Formulário de parceria (`parceiros.html`) — campos: empresa, contato, cargo, email, telefone, tipo de parceria, contribuição
-- AJAX submission via Formspree com mensagem de sucesso
+- **Envio via WhatsApp** (2026-10-17): handler em `js/main.js` monta mensagem (label + valor de cada campo) e abre `wa.me/5592984392169` com texto pré-preenchido; Formspree removido
 - CSS consistente com Design System v3
 
 ### Equipe
@@ -209,11 +209,11 @@ heberton-pinheiro/
 - **Sitemap:** adicionadas `parceiros.html` e `vagas-inclusivas.html`; `lastmod` atualizado
 - **Falso positivo:** `videos/grupo_britania.mp4` está dentro de bloco comentado em `videos.html` — não é bug
 - **Falso positivo:** imagens `.webp` estão referenciadas via `<picture>` — não são órfãs
-- **Conhecido (pendente):** busca do modal não tem handler JS (nenhuma página) — funcionalidade futura; Formspree com placeholder `SEU_ID_AQUI`
+- **Conhecido (pendente):** busca do modal não tem handler JS (nenhuma página) — funcionalidade futura
 
 ## Git
-- **Último commit:** `0ee256a` — fix: acessibilidade e consistência (modais de busca, alt, sitemap)
-- **Commits recentes:** `dc2390f` (context.md), `64cb8d3` (logo Instituto Mãos recortada), `27cc7aa` (legenda), `148d175` (adiciona parceiro)
+- **Último commit:** `18eb900` — feat: formulários enviam via WhatsApp (remove Formspree)
+- **Commits recentes:** `162b7de` (context.md), `0ee256a` (acessibilidade/consistência), `dc2390f` (context.md), `64cb8d3` (logo Instituto Mãos recortada)
 
 ## Deploy
 - **Plataforma:** Vercel (deploy automático via GitHub)
@@ -221,5 +221,5 @@ heberton-pinheiro/
 - **Config:** `vercel.json` com redirects
 
 ## Pendências / Próximos Passos
-- [ ] Formulários: configurar ID do Formspree (substituir `SEU_ID_AQUI` nos forms de voluntariado e parceria)
 - [ ] Busca do modal: implementar handler JS (hoje o modal abre, mas o submit não busca nada)
+- [ ] Testar envio dos formulários em dispositivo real (abre WhatsApp com mensagem pré-preenchida)
