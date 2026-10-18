@@ -121,7 +121,7 @@
         }
     });
 
-    // Form handling (Formspree AJAX)
+    // Form handling — envio via WhatsApp (wa.me)
     $('form[id$="-form"]').on('submit', function(e) {
         e.preventDefault();
         var form = $(this);
@@ -129,23 +129,35 @@
         var submitBtn = form.find('button[type="submit"]');
         var originalText = submitBtn.html();
 
-        submitBtn.prop('disabled', true).html('<i class="fa fa-spinner fa-spin me-2" aria-hidden="true"></i>Enviando...');
-
-        $.ajax({
-            url: form.attr('action'),
-            method: 'POST',
-            data: form.serialize(),
-            dataType: 'json',
-            success: function() {
-                form[0].reset();
-                submitBtn.prop('disabled', false).html(originalText);
-                $('#' + formId.replace('-form', '-success')).removeClass('d-none').attr('tabindex', '-1').focus();
-            },
-            error: function() {
-                submitBtn.prop('disabled', false).html(originalText);
-                alert('Erro ao enviar. Tente novamente ou entre em contato pelo WhatsApp.');
-            }
+        // Monta a mensagem com label + valor de cada campo preenchido
+        var lines = [];
+        form.find('input, select, textarea').each(function() {
+            var $el = $(this);
+            var val = $el.val();
+            if (!val) { return; }
+            var id = $el.attr('id');
+            var label = id ? form.find('label[for="' + id + '"]').text() : ($el.attr('name') || '');
+            label = label.replace(/\s*\*+\s*/g, '').replace(/\s+/g, ' ').trim();
+            lines.push(label + ': ' + val);
         });
+
+        if (!lines.length) {
+            return;
+        }
+
+        var title = (formId === 'partner-form')
+            ? 'Nova Proposta de Parceria - Site Heberton Pinheiro'
+            : 'Nova Inscricao de Voluntario - Site Heberton Pinheiro';
+        var text = encodeURIComponent(title + '\n\n' + lines.join('\n'));
+        var url = 'https://wa.me/5592984392169?text=' + text;
+
+        submitBtn.prop('disabled', true).html('<i class="fa fa-spinner fa-spin me-2" aria-hidden="true"></i>Abrindo WhatsApp...');
+
+        window.open(url, '_blank', 'noopener');
+
+        form[0].reset();
+        submitBtn.prop('disabled', false).html(originalText);
+        $('#' + formId.replace('-form', '-success')).removeClass('d-none').attr('tabindex', '-1').focus();
     });
     
 })(jQuery);
