@@ -58,7 +58,7 @@ heberton-pinheiro/
 | `nossos-servicos.html` | Consultoria, treinamentos, oficinas, palestras |
 | `contact.html` | Contato + mapa Google |
 | `videos.html` | Vídeos educativos com Video.js |
-| `voluntario.html` | Formulário de voluntariado (Typeform placeholder) |
+| `voluntario.html` | Formulário de voluntariado (envio via WhatsApp) |
 | `parceiros.html` | Parceiros atuais (Instituto Mãos, Britânia-Philco, NG Contabilidade) + formulário de parceria |
 | `vagas-inclusivas.html` | Portal de vagas inclusivas com filtros |
 
@@ -73,7 +73,7 @@ heberton-pinheiro/
 ### Componentes Estilizados
 - **Navbar:** Background sólido `--primary`, nav links com underline animado, sticky com `backdrop-filter: blur(24px)`
 - **Logo navbar:** `img/logo.png` (300×300) com `height: 2.2em`
-- **Logo footer:** `img/logo.png` (300×300) com `height: 1.8em` em `h1.text-white`
+- **Logo footer:** `img/logo.png` (300×300) com `height: 2.2em` (padronizado em todas as páginas)
 - **Cards:** `.feature-card`, `.service-item`, `.qualification-item`, `.partner-card`, `.team-item` — hover com `translateY(-8px)` + `shadow-xl` + `shadow-glow`
 - **Service icons:** Rotação -45deg com gradiente
 - **Footer:** Cards com `border-radius: var(--radius-lg)`
@@ -108,6 +108,7 @@ heberton-pinheiro/
 - `aria-current="page"` no link de navegação ativo
 - `aria-expanded` no botão toggler do menu
 - `role="search"` no container de busca
+- **Modais de busca:** `aria-labelledby="searchModalLabel"` + `aria-hidden="true"` + `<span class="visually-hidden">` como título, em todas as 9 páginas
 - `<label>` associado a todos os inputs (inclusive search com `visually-hidden`)
 - `tabindex="0"` no iframe do Google Maps
 - VLibras Widget em todas as páginas
@@ -212,8 +213,8 @@ heberton-pinheiro/
 - **Conhecido (pendente):** busca do modal não tem handler JS (nenhuma página) — funcionalidade futura
 
 ## Git
-- **Último commit:** `18eb900` — feat: formulários enviam via WhatsApp (remove Formspree)
-- **Commits recentes:** `162b7de` (context.md), `0ee256a` (acessibilidade/consistência), `dc2390f` (context.md), `64cb8d3` (logo Instituto Mãos recortada)
+- **Último commit:** `1d7f95c` — docs: registra envio de formulários via WhatsApp
+- **Commits recentes:** `18eb900` (formulários via WhatsApp), `162b7de` (context.md), `0ee256a` (acessibilidade/consistência), `64cb8d3` (logo Instituto Mãos recortada)
 
 ## Deploy
 - **Plataforma:** Vercel (deploy automático via GitHub)

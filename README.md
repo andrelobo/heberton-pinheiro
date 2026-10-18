@@ -7,6 +7,7 @@ Site institucional profissional para a **Heberton Pinheiro Consultoria e Treinam
 
 ## Recursos Principais
 - **WhatsApp Integrado** em todos os CTAs
+- **Formulários via WhatsApp** — voluntariado e parceria abrem o wa.me com mensagem pré-preenchida
 - **Design 100% responsivo** e acessível
 - **SEO otimizado** com Open Graph, Twitter Cards e Schema.org
 - **VLibras Widget** para acessibilidade (tradução para Libras)
@@ -60,27 +61,28 @@ heberton-pinheiro/
 | `nossos-servicos.html` | Consultoria, treinamentos, oficinas, palestras |
 | `contact.html` | Contato + mapa Google |
 | `videos.html` | Vídeos educativos com Video.js |
-| `voluntario.html` | Formulário de voluntariado |
-| `parceiros.html` | Parceiros + formulário de parceria |
+| `voluntario.html` | Formulário de voluntariado (envio via WhatsApp) |
+| `parceiros.html` | Parceiros (Instituto Mãos, Britânia-Philco, NG Contabilidade) + formulário de parceria via WhatsApp |
 | `vagas-inclusivas.html` | Portal de vagas inclusivas com filtros |
 
 ## Convenções
 - **Lang:** `pt-BR`
 - **Fontes:** Nunito (corpo) + Rubik (headings)
-- **Cores:** `--primary: #044e91`, `--secondary: #34AD54`, `--dark: #091E3E`
+- **Cores (Design System v3):** `--primary: #2563eb`, `--accent: #38bdf8`, `--bg-page: #f8fafc`
 - **WhatsApp:** `https://wa.me/5592984392169`
 
 ## Acessibilidade
 - Skip-to-content link
 - aria-labels em todos os elementos interativos
 - aria-hidden em ícones decorativos
+- Modais de busca com `aria-labelledby` + título oculto em todas as páginas
 - Estilos de foco visíveis (`:focus-visible`)
 - Suporte a `prefers-reduced-motion`
 - Suporte a `prefers-contrast: high`
 - VLibras Widget para traduçãoLibras
 
 ## Deploy
-- **Plataforma:** Vercel
+- **Plataforma:** Vercel (deploy automático a cada push no GitHub)
 - **Domínio:** hebertonpinheiro.com
 
 ## Contato
@@ -88,4 +90,4 @@ heberton-pinheiro/
 - 📧 heberton.pinheiro.silva@gmail.com
 
 ---
-© 2025 Heberton Pinheiro Consultoria e Treinamento. Todos os direitos reservados.
+© 2026 Heberton Pinheiro Consultoria e Treinamento. Todos os direitos reservados.
